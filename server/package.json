@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "author": {
+    "name": "George PolAdaShvili"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.1"
+  }
+}

@@ -1,0 +1,3 @@
+export const SET_NEWS_START = 'SET_NEWS_START'
+export const SET_NEWS_SUCCESS = 'SET_NEWS_SUCCESS'
+export const SET_NEWS_FAILURE = 'SET_NEWS_FAILURE'
