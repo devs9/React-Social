@@ -11,10 +11,6 @@ const initialState = {
 }
 export default (state = initialState, { type, payload }) => {
   switch (type) {
-    case types.AUTH_GOOGLE_INIT_SUCCESS:
-      return { ...state, googleInit: true }
-    case types.AUTH_GOOGLE_INIT_FAILURE:
-      return { ...state, isFetch: false, withGoogle: false, error: payload }
     case types.AUTH_GOOGLE_START:
       return { ...state, isFetch: true }
     case types.AUTH_GOOGLE_GET_SIGN:

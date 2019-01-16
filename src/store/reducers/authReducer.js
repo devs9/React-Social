@@ -4,7 +4,7 @@ const initialState = {
   isAuth: false,
   isFetch: false,
   error: '',
-  userId: null,
+  dataUser: null,
 }
 export default (state = initialState, { type, payload }) => {
   switch (type) {
@@ -25,7 +25,7 @@ export default (state = initialState, { type, payload }) => {
         ...state,
         isAuth: false,
         isFetch: false,
-        userId: null,
+        dataUser: null,
         error: '',
       }
     default:
