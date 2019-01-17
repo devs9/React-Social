@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Div from '../atom/Div'
-import Icon from '../atom/Icon'
+import Icon from '../atom/icons'
 import Text from '../atom/Text'
 
 const DivActionIcon = styled(Div)`

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import SignIn from '../../components/organisms/SignForm'
+import SignIn from '../../components/organisms/FormBlock'
 import { signIn } from '../../store/actions/auth'
 
 class Registration extends PureComponent {

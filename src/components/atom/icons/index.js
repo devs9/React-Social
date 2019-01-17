@@ -14,6 +14,8 @@ const getUrl = ({ theme, $url }) => {
       return theme.Svg.lock
     case 'view':
       return theme.Svg.view
+    case 'close':
+      return theme.Svg.closee
     default:
       return theme.Svg.default
   }
