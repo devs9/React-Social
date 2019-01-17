@@ -8,9 +8,9 @@ class Registration extends PureComponent {
   render() {
     const { auth, history, signIn } = this.props
     return (
-      <div>
+      <>
         <SignIn form="up" auth={auth} signIn={signIn} history={history} />
-      </div>
+      </>
     )
   }
 }

@@ -21,9 +21,12 @@ export default styled.button`
   cursor: pointer;
   border: none;
   outline: none;
+  top: ${props => props.top};
+  right: ${props => props.right};
   width: ${props => props.width};
   height: ${props => props.height};
   margin: ${props => props.margin};
+  position: ${props => props.position};
   color: ${props => props.theme.colors.white};
   transition: background-color 0.2s, color 0.2s;
   display: ${props => props.display || 'inline-block'};

@@ -1,13 +1,14 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import Form from '../atom/form/Form'
-import ErrorBox from '../atom/ErrorBox'
 import Icon from '../atom/icons'
 import IconView from '../atom/icons/IconView'
-import SignLogo from '../molecules/SignLogo'
-import SignWith from '../molecules/SignWith'
-import IsAccount from '../molecules/IsAccount'
-import SignIn from '../molecules/SignIn'
+import Button from '../atom/Button'
+import ErrorBox from '../atom/ErrorBox'
+import SignLogo from '../molecules/form/SignLogo'
+import SignWith from '../molecules/form/SignWith'
+import IsAccount from '../molecules/form/IsAccount'
+import SignIn from '../molecules/form/SignIn'
 import LoadingBtn from '../molecules/hoc/LoadingBtn'
 import { googleSign, facebookSign } from '../../store/actions/authWithSocial'
 
@@ -52,57 +53,65 @@ class FormBlock extends PureComponent {
     const { btnDisabled, viewOpen, email, password, isOpen } = this.state
     const { auth, googleSign, facebookSign, form } = this.props
     const { isFetch, error } = auth
-    return (
-      isOpen && (
-        <Form
-          width={form === 'in' ? '300px' : '600px'}
-          position={form === 'in' ? 'absolute' : null}
-          margin={form === 'in' ? '65px 0' : '-40px auto'}
-          onSubmit={this.$submit}
-        >
-          {form === 'in' && (
-            <Icon
-              position="absolute"
-              top="-45px"
-              right="-115px"
-              $url="close"
-              bgSize="10%"
-              onClick={this.$open}
-            />
-          )}
-          {error && <ErrorBox />}
-          <SignLogo signIn={form === 'in'} signUp={form === 'up'} />
-          {form === 'in' ? (
-            <>
-              <IconView
-                svgHover
-                bgColorView={viewOpen}
-                $url="view"
-                onClick={this.$viewPsw}
-              />
-              <SignIn
-                $onChange={this.$onChange}
-                $viewPsw={this.$viewPsw}
-                $keyUp={this.$keyUp}
-                viewOpen={viewOpen}
-                email={email}
-                password={password}
-              />
-            </>
-          ) : null}
-          <LoadingBtn
-            children="Sign In"
-            width="90%"
-            height="50px"
-            margin="15px"
-            disabled={btnDisabled}
-            isLoading={isFetch}
-            onSubmit={this.$submit}
+    return isOpen ? (
+      <Form
+        width={form === 'in' ? '300px' : '600px'}
+        position={form === 'in' ? 'absolute' : null}
+        margin={form === 'in' ? '65px 0' : '-40px auto'}
+        onSubmit={this.$submit}
+      >
+        {form === 'in' && (
+          <Icon
+            position="absolute"
+            width="25px"
+            height="25px"
+            right="25px"
+            $url="close"
+            onClick={this.$open}
           />
-          <SignWith eventGoogle={googleSign} eventFB={facebookSign} />
-          <IsAccount isAccount />
-        </Form>
-      )
+        )}
+        {error && <ErrorBox />}
+        <SignLogo signIn={form === 'in'} signUp={form === 'up'} />
+        {form === 'in' ? (
+          <>
+            <IconView
+              svgHover
+              bgColorView={viewOpen}
+              $url="view"
+              onClick={this.$viewPsw}
+            />
+            <SignIn
+              $onChange={this.$onChange}
+              $viewPsw={this.$viewPsw}
+              $keyUp={this.$keyUp}
+              viewOpen={viewOpen}
+              email={email}
+              password={password}
+            />
+          </>
+        ) : null}
+        <LoadingBtn
+          children="Sign In"
+          width="90%"
+          height="50px"
+          margin="15px"
+          disabled={btnDisabled}
+          isLoading={isFetch}
+          onSubmit={this.$submit}
+        />
+        <SignWith eventGoogle={googleSign} eventFB={facebookSign} />
+        <IsAccount isAccount={form === 'in'} />
+      </Form>
+    ) : (
+      <Button
+        position="absolute"
+        top="40px"
+        right="30px"
+        width="75px"
+        height="50px"
+        children="Sign In"
+        onClick={this.$open}
+      />
     )
   }
 }

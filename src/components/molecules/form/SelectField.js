@@ -1,7 +1,7 @@
 import React from 'react'
 import Select from 'react-select'
-import Div from '../atom/Div'
-import Label from '../atom/form/Label'
+import Div from '../../atom/Div'
+import Label from '../../atom/form/Label'
 
 const options = [
   { value: 'male', label: 'Male' },

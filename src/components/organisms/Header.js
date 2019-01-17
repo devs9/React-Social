@@ -15,10 +15,13 @@ export default ({ isAuth, signOut }) => (
         children={isAuth ? 'Profile' : 'Registration'}
       />
     </Div>
-    {!isAuth ? (
-      <Link exact to="/" children="Sign In" />
-    ) : (
-      <Button children="Sign Out" onClick={signOut} />
+    {isAuth && (
+      <Button
+        width="75px"
+        height="50px"
+        children="Sign Out"
+        onClick={signOut}
+      />
     )}
   </HeaderItem>
 )

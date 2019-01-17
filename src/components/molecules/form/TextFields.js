@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Div from '../atom/Div'
-import Label from '../atom/form/Label'
-import Bar from '../atom/form/Bar'
-import Input from '../atom/form/Input'
+import Div from '../../atom/Div'
+import Label from '../../atom/form/Label'
+import Bar from '../../atom/form/Bar'
+import Input from '../../atom/form/Input'
 
 const DivField = styled(Div)`
   width: 75%;

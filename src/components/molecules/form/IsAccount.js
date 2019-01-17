@@ -1,7 +1,7 @@
 import React from 'react'
-import Div from '../atom/Div'
-import Link from '../atom/Link'
-import Text from '../atom/Text'
+import Div from '../../atom/Div'
+import Link from '../../atom/Link'
+import Text from '../../atom/Text'
 
 export default ({ isAccount }) => (
   <Div
