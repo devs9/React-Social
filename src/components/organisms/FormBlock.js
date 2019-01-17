@@ -9,6 +9,7 @@ import SignLogo from '../molecules/form/SignLogo'
 import SignWith from '../molecules/form/SignWith'
 import IsAccount from '../molecules/form/IsAccount'
 import SignIn from '../molecules/form/SignIn'
+import SignUp from '../molecules/form/SignUp'
 import LoadingBtn from '../molecules/hoc/LoadingBtn'
 import { googleSign, facebookSign } from '../../store/actions/authWithSocial'
 
@@ -20,6 +21,8 @@ class FormBlock extends PureComponent {
     errorMessage: '',
     email: '',
     password: '',
+    firstName: '',
+    secondName: '',
   }
   $onChange = fieldName => e => {
     this.setState({ [fieldName]: e.currentTarget.value })
@@ -47,11 +50,24 @@ class FormBlock extends PureComponent {
     this.setState({ viewOpen: !this.state.viewOpen })
   }
   $open = () => {
-    this.setState({ isOpen: !this.state.isOpen })
+    this.setState({
+      isOpen: !this.state.isOpen,
+      password: '',
+      viewOpen: false,
+      email: '',
+    })
   }
   render() {
-    const { btnDisabled, viewOpen, email, password, isOpen } = this.state
     const { auth, googleSign, facebookSign, form } = this.props
+    const {
+      btnDisabled,
+      viewOpen,
+      email,
+      password,
+      isOpen,
+      firstName,
+      secondName,
+    } = this.state
     const { isFetch, error } = auth
     return isOpen ? (
       <Form
@@ -89,7 +105,15 @@ class FormBlock extends PureComponent {
               password={password}
             />
           </>
-        ) : null}
+        ) : (
+          <SignUp
+            $keyUp={this.$keyUp}
+            email={email}
+            $onChange={this.$onChange}
+            firstName={firstName}
+            secondName={secondName}
+          />
+        )}
         <LoadingBtn
           children="Sign In"
           width="90%"

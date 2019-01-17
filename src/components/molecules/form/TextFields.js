@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Div from '../../atom/Div'
 import Label from '../../atom/form/Label'
 import Bar from '../../atom/form/Bar'
 import Input from '../../atom/form/Input'
 
-const DivField = styled(Div)`
-  width: 75%;
+const Div = styled.div`
+  position: relative;
+  width: ${props => props.width};
   margin: 20px 20px 10px 30px;
 `
 export default class extends Component {
@@ -21,7 +21,9 @@ export default class extends Component {
     const { type, value, name, onChange, onKeyUp } = this.props
     const { focused } = this.state
     return (
-      <DivField>
+      <Div
+        width={name === 'email' ? '80%' : name === 'password' ? '80%' : '40%'}
+      >
         <Input
           autoComplete="foo"
           value={value}
@@ -41,7 +43,7 @@ export default class extends Component {
           position="absolute"
         />
         <Bar focus={focused} />
-      </DivField>
+      </Div>
     )
   }
 }
