@@ -1,8 +1,1 @@
-<?xml version="1.0" ?>
-<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
-<svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px"
-     xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g fill="white" transform="translate(192 48)">
-    <path d="M-168-34v-6c0-4.409-3.588-8-8-8c-4.409,0-8,3.591-8,8v6c-2.209,0-4,1.791-4,4v10c0,2.209,1.791,4,4,4h16   c2.209,0,4-1.791,4-4v-10C-164-32.209-165.791-34-168-34z M-175-24.307V-21c0,0.554-0.446,1-1,1c-0.553,0-1-0.446-1-1v-3.307   c-0.586-0.349-1-0.961-1-1.693c0-1.104,0.896-2,2-2c1.104,0,2,0.896,2,2C-174-25.268-174.411-24.654-175-24.307z M-172-34h-8v-6   c0-2.207,1.796-4,4-4c2.205,0,4,1.793,4,4V-34z"/>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" width="32" height="32" enable-background="new 0 0 32 32" version="1.1" viewBox="0 0 32 32" xml:space="preserve"><g fill="#fff"><path d="M-168-34v-6c0-4.409-3.588-8-8-8c-4.409,0-8,3.591-8,8v6c-2.209,0-4,1.791-4,4v10c0,2.209,1.791,4,4,4h16 c2.209,0,4-1.791,4-4v-10C-164-32.209-165.791-34-168-34z M-175-24.307V-21c0,0.554-0.446,1-1,1c-0.553,0-1-0.446-1-1v-3.307 c-0.586-0.349-1-0.961-1-1.693c0-1.104,0.896-2,2-2c1.104,0,2,0.896,2,2C-174-25.268-174.411-24.654-175-24.307z M-172-34h-8v-6 c0-2.207,1.796-4,4-4c2.205,0,4,1.793,4,4V-34z" transform="translate(192 48)"/></g></svg>
